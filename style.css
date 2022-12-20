@@ -117,7 +117,7 @@ body {
 }
 /* HEADER */
 .header {
-    padding: 20px 15px 10px;
+    padding: 22px 15px 10px 0;
 }
 
 .breadcrumb {
@@ -128,11 +128,11 @@ body {
 .btn.message {
     border: 1px solid #d4d4d4;
     padding: 20px;
-    margin-right: 12px;
+    margin-right: 17px;
 }
 
 .btn.login {
-    padding: 10px 35px 10px 20px;
+    padding: 10px 35px 10px 15px;
     background-color: #fff;
     font-weight: 500;
     font-size: 14px;
@@ -140,7 +140,7 @@ body {
 }
 
 .avatar {
-    margin-right: 12px;
+    margin-right: 14px;
 }
 
 .message-wrap {
@@ -152,19 +152,19 @@ body {
 /* MAIN */
 .btn.create-btn {
     position: relative;
-    padding: 10px 35px 10px 15px;
+    padding: 5px 15px;
     background-color: #55c97b;
     color: #fff;
     font-size: 12px;
 }
 
 .btn.add {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 
 .btn.add::before {
     content: '+';
-    margin-right: 10px;
+    margin-right: 16px;
     font-size: 16px;
 }
 
