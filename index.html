@@ -64,11 +64,50 @@
 			</button>
 		</header>
 		<main class="main">
-			<button class="btn create-btn add" type="button">Создать свой магазин</button>
+			<button class="btn create-btn add" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Создать свой магазин</button>
 
+			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-dialog-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Создать магазин</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body d-flex justify-content-between">
+							<div class="dropdown">
+								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									Стандартный
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Стандартный</a></li>
+									<li><a class="dropdown-item" href="#">Не стандартный</a></li>
+								</ul>
+							</div>
+							
+							<div class="dropdown">
+								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+									Классическая
+								</button>
+								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+									<li><a class="dropdown-item" href="#">Классическая</a></li>
+									<li><a class="dropdown-item" href="#">Модерн</a></li>
+								</ul>
+							</div>
+						</div>
+							
+						<div class="modal-footer justify-content-start">
+							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+							<button type="button" class="btn btn-primary">Создать</button>
+						</div>
+							
+							
+						
+					</div>
+				</div>
+			</div>
 			<h2 class="h3">Управление магазинами</h2>
 
-			<table class="table">
+			<table class="table align-middle">
 				<thead>
 					<tr>
 						<th scope="col">№</th>
