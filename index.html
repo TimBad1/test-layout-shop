@@ -20,12 +20,13 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-		</script>
+	</script>
+	<script defer src="./main.js"></script>
 </head>
 
-<body class="body">
+<body class="body position-relative">
 	<aside class="menu">
-		<img src="./images/logo.png" alt="Логотип" class="logo">
+		
 		<ul class="menu__list">
 			<li class="menu__item home">Главная</li>
 			<li class="menu__item shopping active">Мои магазины</li>
@@ -41,6 +42,7 @@
 
 	<div class="layout">
 		<header class="header d-flex">
+			<img src="./images/logo.png" alt="Логотип" class="logo">
 			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb">
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item active">Главная</li>
@@ -64,50 +66,13 @@
 			</button>
 		</header>
 		<main class="main">
-			<button class="btn create-btn add" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Создать свой магазин</button>
+			<button class="btn create-btn add" type="button" id="create">
+				Создать	свой магазин
+			</button>
 
-			<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				<div class="modal-dialog modal-dialog-centered">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Создать магазин</h5>
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<div class="modal-body d-flex justify-content-between">
-							<div class="dropdown">
-								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									Стандартный
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="#">Стандартный</a></li>
-									<li><a class="dropdown-item" href="#">Не стандартный</a></li>
-								</ul>
-							</div>
-							
-							<div class="dropdown">
-								<button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-									Классическая
-								</button>
-								<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-									<li><a class="dropdown-item" href="#">Классическая</a></li>
-									<li><a class="dropdown-item" href="#">Модерн</a></li>
-								</ul>
-							</div>
-						</div>
-							
-						<div class="modal-footer justify-content-start">
-							<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-							<button type="button" class="btn btn-primary">Создать</button>
-						</div>
-							
-							
-						
-					</div>
-				</div>
-			</div>
-			<h2 class="h5">Управление магазинами</h2>
+			<h2 class="h5 mb-4">Управление магазинами</h2>
 
-			<table class="table align-middle">
+			<table class="table align-middle table-borderless table-light">
 				<thead>
 					<tr>
 						<th scope="col">№</th>
@@ -122,7 +87,7 @@
 						<td>Дипломная работа</td>
 						<td>http://www.work5.ru/services</td>
 						<td>
-							<button class="btn create-btn write" type="button">Редактировать</button>
+							<button class="btn create-btn write me-2 mb-2 mt-2" type="button">Редактировать</button>
 							<button class="btn create-btn delete" type="button">Редактировать</button>
 						</td>
 					</tr>
@@ -131,7 +96,7 @@
 						<td>Дипломная работа</td>
 						<td>http://www.work5.ru/services</td>
 						<td>
-							<button class="btn create-btn write" type="button">Редактировать</button>
+							<button class="btn create-btn write me-2 mb-2 mt-2" type="button">Редактировать</button>
 							<button class="btn create-btn delete" type="button">Редактировать</button>
 						</td>
 					</tr>
@@ -140,5 +105,49 @@
 		</main>
 	</div>
 </body>
+
+<div class="modals" id="modal">
+	<div class="modal__header d-flex justify-content-between p-4">
+		<h2 class="h5">Создать магазин</h2>
+		<button type="button" class="btn-close" aria-label="Close" id="close-btn"></button>
+	</div>
+	
+	<div class="modal__main d-flex justify-content-between flex-wrap">
+		<div class="modal__main-left px-4 py-3 me-4">
+			<h3 class="h6">Шаблон</h3>
+
+			<select class="form-select" aria-label="Default select example">
+				<option class="form-select__item" selected>Стандартный</option>
+				<option class="form-select__item" value="2">Нестандартный</option>
+			</select>
+		</div>
+
+		<div class="modal__main-right px-4 py-3">
+			<h3 class="h6">Цветовая схема</h3>
+
+			<select class="form-select" aria-label="Default select example">
+				<option class="form-select__item" selected>Классическая</option>
+				<option class="form-select__item" value="1">Стандартный</option>
+				<option class="form-select__item" value="2">Нестандартный</option>
+			</select>
+		</div>
+
+		<div class="modal__main-bottom px-4 py-3">
+			<h3 class="h6">Домен</h3>
+			<form class="mb-4 needs-validation input-group">
+				<input type="text" class="form-control" placeholder="Например: ivangrozniy" aria-describedby="button-addon2" id="validationCustom01" required>
+				<button class="btn btn-primary blue-button px-5" type="submit" id="button-addon2">.work5.ru</button>
+			</form>
+			<div class="invalid-popup">
+				В названии домена разрешены латиница и “-”, запрещается использовать словосочетание Work 5. После создания магазина Вы можете прикрутить свой домен (например ivangrozniy.ru). Подробнее по <a href="#">ссылке</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal__footer d-flex justify-content-start p-4">
+		<button type="button" class="btn modal__cancel me-2" id="cancel">Отмена</button>
+		<button type="button" class="btn modal__create" id="new-create">Создать</button>
+	</div>
+</div>
 
 </html>
