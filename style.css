@@ -15,9 +15,14 @@ button {
     font-family: inherit;
 }
 
+td, thead {
+    border-style: none;
+}
+
 html {
     box-sizing: border-box;
 }
+
 
 body {
     position: relative;
@@ -151,6 +156,9 @@ body {
     background-color: #55c97b;
     color: #fff;
     font-size: 12px;
+}
+
+.btn.add {
     margin-bottom: 35px;
 }
 
@@ -179,7 +187,10 @@ body {
     margin-bottom: 25px;
 }
 
-
+/* POPUP */
+.modal-title {
+    color: #343434;
+}
 
 @media screen and (max-width: 800px) {
 
