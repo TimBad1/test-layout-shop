@@ -6,32 +6,100 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Work 5</title>
+
+	<link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+	<link rel="manifest" href="./favicon/site.webmanifest">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-		crossorigin="anonymous"></script>
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+		</script>
 </head>
 
 <body class="body">
-	<header class="header">
-		<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="#">Главная</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Мои магазины</li>
-			</ol>
-		</nav>
+	<aside class="menu">
+		<img src="./images/logo.png" alt="Логотип" class="logo">
+		<ul class="menu__list">
+			<li class="menu__item home">Главная</li>
+			<li class="menu__item shopping active">Мои магазины</li>
+			<li class="menu__item megaphone">Промоматериалы</li>
+			<li class="menu__item pie-chart">Статистика</li>
+			<li class="menu__item wallet">Баланс</li>
+			<li class="menu__item profile">Персональные данные</li>
+			<li class="menu__item information">FAQ</li>
+			<li class="menu__item multimedia">Техподдержка</li>
+			<li class="menu__item logout">Выход</li>
+		</ul>
+	</aside>
 
-		<button type="button" class="btn btn-primary position-relative">
-			Profile
-			<span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-				<span class="visually-hidden">New alerts</span>
-			</span>
-		</button>
-	</header>
-	<main class="main"></main>
-	<footer class="footer"></footer>
-	<aside class="menu"></aside>
+	<div class="layout">
+		<header class="header d-flex">
+			<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item active">Главная</li>
+					<li class="breadcrumb-item active" aria-current="page">Мои магазины</li>
+				</ol>
+			</nav>
+
+			<button class="btn message d-flex">
+				<div class="position-relative message-wrap">
+					<img src="./images/message.png" alt="Сообщения">
+					<span
+						class="position-absolute top-0 start-100 translate-middle p-1 bg-danger border border-light rounded-circle">
+						<span class="visually-hidden">New alerts</span>
+					</span>
+				</div>
+
+			</button>
+			<button class="btn login">
+				<img src="./images/user.png" alt="" class="avatar">
+				Максим Добжанский
+			</button>
+		</header>
+		<main class="main">
+			<button class="btn create-btn add" type="button">Создать свой магазин</button>
+
+			<h2 class="h3">Управление магазинами</h2>
+
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">№</th>
+						<th scope="col">Название</th>
+						<th scope="col">Адрес</th>
+						<th scope="col">Действие</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>12345</td>
+						<td>Дипломная работа</td>
+						<td>http://www.work5.ru/services</td>
+						<td>
+							<button class="btn create-btn write" type="button">Редактировать</button>
+							<button class="btn create-btn delete" type="button">Редактировать</button>
+						</td>
+					</tr>
+					<tr>
+						<td>12345</td>
+						<td>Дипломная работа</td>
+						<td>http://www.work5.ru/services</td>
+						<td>
+							<button class="btn create-btn write" type="button">Редактировать</button>
+							<button class="btn create-btn delete" type="button">Редактировать</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+	</div>
 </body>
 
 </html>
